@@ -1,0 +1,10 @@
+The solution involves explicitly accounting for the border width within the `calc()` function:
+
+```css
+.element {
+  width: calc(100% - 40px); /* Subtract double the border width */
+  border: 10px solid black;
+}
+```
+
+This corrected code subtracts the total width added by the border (20px on each side) from the `100%` calculation, ensuring that the rendered width aligns with the intent.
