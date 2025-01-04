@@ -1,0 +1,12 @@
+The following CSS code snippet demonstrates an uncommon error related to the usage of the `calc()` function: 
+
+```css
+.element {
+  width: calc(100% - 20px);
+  border: 10px solid black; 
+}
+```
+
+The issue is that while the `calc()` function intends to dynamically calculate the width, the `border` adds extra width that isn't considered in the calculation. Therefore, the actual rendered width will be smaller than intended. The border contributes to the element's total width. The `100%` width calculation doesn't account for the added border.
+
+This issue is subtle because it doesn't necessarily produce a visible error message; rather, the element's rendered width will deviate unexpectedly from what's specified in the CSS.  This kind of bug becomes more problematic when dealing with responsive designs and complex layouts.
